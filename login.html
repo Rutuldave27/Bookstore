@@ -45,7 +45,8 @@ button:focus {
   height: 120px;
   font-weight: 300;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 1px;
   color: rgba(255, 255, 255, 0.65)
 }
 
@@ -70,8 +71,8 @@ button:focus {
   font-family: roboto;
   font-weight: 300;
   line-height: 2.5em;
-  margin-top: auto;
-  margin-bottom: 25px;
+  margin-top: -100px;
+  margin-bottom: 55px;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
@@ -104,7 +105,7 @@ button:focus {
 }
 
 .input-fields {
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 .container {
@@ -217,9 +218,11 @@ button:focus {
   }
 }
 </style>
+
+  
 </head>
 
-
+<body>
 <div class='bold-line'></div>
 <div class='container'>
   <div class='window'>
@@ -228,13 +231,23 @@ button:focus {
       <div class='welcome'>Hello There!</div>
       <div class='subtitle'>Let's connect </div>
       <div class='input-fields'>
-        <input type='text' placeholder='Username' class='input-line full-width'></input>
-        <input type='email' placeholder='Email' class='input-line full-width'></input>
-        <input type='password' placeholder='Password' class='input-line full-width'></input>
+        
+        <form name="myform"  onsubmit="return validateform()" >  
+        <input type='text' name="name" placeholder='Username' class='input-line full-width'></input>
+        <input type='email' name="email" placeholder='Email' class='input-line full-width'></input>
+        
+        <input type='password' name="password" placeholder='Password' class='input-line full-width'></input>
+        <input type='password' name="password2" placeholder='Retype Password' class='input-line full-width'></input>
 
       </div>
       <div class='spacing'>or continue with <span class='highlight'> <a href="#">Google </a></span></div>
       <div><button class='ghost-round full-width'>Create Account</button></div>
+    </form>  
     </div>
   </div>
 </div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
